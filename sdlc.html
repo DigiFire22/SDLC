@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Development Life Cycle</title>
+
+    <style>
+        .software {
+          background-color: #eee;
+          color: #444;
+          cursor: pointer;
+          padding: 18px;
+          width: 100%;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 15px;
+          transition: 0.4s;
+        }
+        
+        .active, .software:hover {
+          background-color: #ccc; 
+        }
+        
+        .panel {
+          padding: 0 18px;
+          display: none;
+          background-color: white;
+          overflow: hidden;
+        }
+        </style>
+
+</head>
+<body>
+
+    <h1>SDLC</h1>
+    <p>its a software process used for testing high quality software</p>
+
+    <button class="software">Planning & Requirement Analysis</button>
+    <div class="panel">
+        <p></p>
+    </div>
+
+    <button class="software">Defining Requirements</button>
+    <div class="panel">
+      <p></p>
+    </div>
+
+    <button class="software">Design/Architecture</button>
+    <div class="panel">
+      <p></p>
+    </div>
+
+    <button class="software">Building the Product</button>
+    <div class="panel">
+      <p></p>
+    </div>
+
+    <button class="software">Testing</button>
+    <div class="panel">
+      <p></p>
+    </div>
+
+    <button class="software">Deployment and Maintenance</button>
+    <div class="panel">
+      <p></p>
+    </div>
+
+<script>
+var acc = document.getElementsByClassName("software");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
